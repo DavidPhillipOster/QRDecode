@@ -32,8 +32,8 @@ You can specify complete file paths on the command line, except it doesn't work 
 * I couldn't get layout constraints to work properly (window filled screen on drop. (TextView wouldn't let me type)) so I just got rid of them and did the layout in TopView.
 * drop destination handling was not obvious.
 * Actual QRCode scanning was not obvious: I needed to create a handler that references the image, and hand it a request.
-* Xcode injects additional arguments into the command line like 
-    $ myProgram -NSDocumentRevisionsDebugMode YES
+* Xcode injects additional arguments into the command line like
+    `$ myProgram -NSDocumentRevisionsDebugMode YES`
 * Opening files from the command-line doesn't work because of sandboxing. It would work if sandboxing were turned off.
 * NSTextView, as firstResponder, disallows pasting images so QRViewController never gets a chance to see the paste. I wrote TextViewDelegatablePaste, a subclass of NSTextView, to handle pasting images into QRViewController.
 
